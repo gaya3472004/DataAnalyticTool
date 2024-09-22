@@ -27,7 +27,7 @@ The **Data Analytic Tool** is a  web application designed to simplify the proces
 
 **Results**
 
-![image](https://github.com/user-attachments/assets/5a7ee4fc-7619-4434-8e7b-75bce295ee2e)
+![image](https://github.com/user-attachments/assets/ba32368d-c0c8-4b21-b524-fedd8de178ab)
 
 ![image](https://github.com/user-attachments/assets/7245e623-b454-4f23-9a26-9fbcda57bad4)
 
