@@ -17,3 +17,18 @@ The **Data Analytic Tool** is a  web application designed to simplify the proces
 - **Visualization Libraries**: Matplotlib, Seaborn
 - **Data Processing**: Pandas, NumPy
 
+
+## Output Examples
+
+**Uploading Datasets**
+![image](https://github.com/user-attachments/assets/70ea159d-8a9a-412d-8cc5-e3bbd8fc281a)
+
+![image](https://github.com/user-attachments/assets/6695d759-95a7-490f-8fd5-10504786bd21)
+
+**Results**
+
+![image](https://github.com/user-attachments/assets/5a7ee4fc-7619-4434-8e7b-75bce295ee2e)
+
+![image](https://github.com/user-attachments/assets/4f681b8e-718a-4334-8a71-73b07b31a2d1)
+
+
