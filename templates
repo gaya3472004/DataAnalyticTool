@@ -1,1 +1,197 @@
+index.html
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytic Tool</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .upload-box {
+            padding: 20px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .upload-box h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #495057;
+            text-align: center;
+        }
+        .upload-box input[type="file"] {
+            display: block;
+            width: 100%;
+            margin: 20px 0;
+            border: 1px solid #ced4da;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Analytic Tool</h1>
+        <div class="upload-box">
+            <h2>Upload Your Dataset</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="dataset" accept=".csv" required>
+                <button type="submit" class="button">Upload and Analyze</button>
+            </form>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Data Analytic Tool. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+view_analysis.html
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Analytic Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        .results-box, .visualizations-box, .mapreduce-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .results-box h2, .visualizations-box h2, .mapreduce-box h2 {
+            margin-top: 0;
+        }
+        .button {
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            margin: 20px auto;
+        }
+        .button:hover {
+            background-color: #003d7a;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .dict-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .dict-list li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Analysis Results</h1>
+        
+        <div class="results-box">
+            <h2>Analysis Results</h2>
+            <h3>Mean</h3>
+            <ul class="dict-list">
+                {% for key, value in analysis_results.mean.items() %}
+                <li>{{ key }}: {{ value }}</li>
+                {% endfor %}
+            </ul>
+            <h3>Standard Deviation</h3>
+            <ul class="dict-list">
+                {% for key, value in analysis_results.std.items() %}
+                <li>{{ key }}: {{ value }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="visualizations-box">
+            <h2>Visualizations</h2>
+            {% for column, img_data in histograms.items() %}
+            <div>
+                <h3>Histogram for {{ column }}</h3>
+                <img src="data:image/png;base64,{{ img_data }}" alt="Histogram for {{ column }}">
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="mapreduce-box">
+            <h2>MapReduce Results</h2>
+            <ul class="dict-list">
+                {% for column, total_count in mapreduce_results.items() %}
+                <li>{{ column }}: {{ total_count }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <form action="/generate_pdf" method="get">
+            <button type="submit" class="button">Download Analysis as PDF</button>
+        </form>
+    </div>
+</body>
+</html>
