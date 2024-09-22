@@ -23,12 +23,23 @@ The **Data Analytic Tool** is a  web application designed to simplify the proces
 **Uploading Datasets**
 ![image](https://github.com/user-attachments/assets/70ea159d-8a9a-412d-8cc5-e3bbd8fc281a)
 
-![image](https://github.com/user-attachments/assets/6695d759-95a7-490f-8fd5-10504786bd21)
+![image](https://github.com/user-attachments/assets/a18baea1-cfca-4faa-965b-f731ac588a6b)
 
 **Results**
 
 ![image](https://github.com/user-attachments/assets/5a7ee4fc-7619-4434-8e7b-75bce295ee2e)
 
-![image](https://github.com/user-attachments/assets/4f681b8e-718a-4334-8a71-73b07b31a2d1)
+![image](https://github.com/user-attachments/assets/7245e623-b454-4f23-9a26-9fbcda57bad4)
+
+![image](https://github.com/user-attachments/assets/8579a1d4-5e3c-46c6-9c0d-b4c4cba6fda8)
+
+![image](https://github.com/user-attachments/assets/bae3d30b-4d0d-4e3e-9b93-05d4048851d4)
+
+![image](https://github.com/user-attachments/assets/41e99ed1-3390-4a49-b773-f8d813df70bd)
+
+![image](https://github.com/user-attachments/assets/aa20755a-aef4-48de-a2c6-b98559fe27d1)
+
+
+
 
 
